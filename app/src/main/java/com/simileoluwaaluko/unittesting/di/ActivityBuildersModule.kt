@@ -1,6 +1,6 @@
 package com.simileoluwaaluko.unittesting.di
 
-import com.simileoluwaaluko.unittesting.NotesListActivity
+import com.simileoluwaaluko.unittesting.ui.noteslist.NotesListActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

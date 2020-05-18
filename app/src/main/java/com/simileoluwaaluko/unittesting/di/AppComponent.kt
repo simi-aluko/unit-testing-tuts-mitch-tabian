@@ -6,11 +6,12 @@ import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
 import dagger.android.AndroidInjector
+import javax.inject.Singleton
 
 /**
  * Created by Simileoluwa Aluko on 2020-05-05.
  */
-
+@Singleton
 @Component(
     modules = [
     AndroidInjectionModule::class,

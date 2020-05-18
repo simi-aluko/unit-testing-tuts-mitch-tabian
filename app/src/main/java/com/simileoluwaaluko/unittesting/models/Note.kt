@@ -2,6 +2,7 @@ package com.simileoluwaaluko.unittesting.models
 
 import android.os.Parcel
 import android.os.Parcelable
+import androidx.annotation.NonNull
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.Ignore
@@ -17,8 +18,9 @@ class Note : Parcelable {
     @PrimaryKey(autoGenerate = true)
     var id = 0
 
+    @NonNull
     @ColumnInfo(name = "title")
-    lateinit var title: String
+    var title: String?
 
     @ColumnInfo(name = "content")
     var content: String? = null
@@ -26,14 +28,14 @@ class Note : Parcelable {
     @ColumnInfo(name = "timestamp")
     var timestamp: String? = null
 
-    constructor(title: String, content: String?, timestamp: String?) {
+    constructor(@NonNull title: String, content: String?, timestamp: String?) {
         this.title = title
         this.content = content
         this.timestamp = timestamp
     }
 
     @Ignore
-    constructor(id: Int, title: String, content: String?, timestamp: String?) {
+    constructor(id: Int,@NonNull title: String, content: String?, timestamp: String?) {
         this.id = id
         this.title = title
         this.content = content
